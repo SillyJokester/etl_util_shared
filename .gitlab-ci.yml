@@ -1,0 +1,5 @@
+build:
+    script:
+       - pwd
+       - mvn test sonar:sonar -Dmaven.test.failure.ignore=true -Dsonar.core.codeCoveragePlugin=jacoco -Dsonar.dynamicAnalysis=reuseReports
+       - mvn clean
